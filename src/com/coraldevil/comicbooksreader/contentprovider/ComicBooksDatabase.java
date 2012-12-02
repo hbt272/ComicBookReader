@@ -8,7 +8,7 @@ import android.util.Log;
 public class ComicBooksDatabase extends SQLiteOpenHelper{
 
 	private static final String TAG = ComicBooksDatabase.class.getName();
-	private static final int DB_VERSION = 1;
+	private static final int DB_VERSION = 3;
 	private static final String DB_NAME = "ComicBooksDatabase";
 	public static final String TABLE_COMICBOOKS = "ComicBooks";
 	public static final String _ID = "_id";
@@ -19,8 +19,8 @@ public class ComicBooksDatabase extends SQLiteOpenHelper{
 			+ ComicBookContentProvider.URL + " TEXT, "
 			+ ComicBookContentProvider.BOOK_NAME
 			+ " TEXT NOT NULL, "
-			+ ComicBookContentProvider.THUMBNAIL_URL + "TEXT, "
-			+ ComicBookContentProvider.PAGE_NUMBER + "integer, "
+			+ ComicBookContentProvider.THUMBNAIL_URL + " TEXT, "
+			+ ComicBookContentProvider.PAGE_NUMBER + " integer, "
 			+ ComicBookContentProvider.CURRENT_PAGE + " integer);";
 	
 	public ComicBooksDatabase(Context context) {

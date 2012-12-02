@@ -10,12 +10,17 @@ public class ComicBook {
 	public ComicBook(){
 		url = "";
 		bookName = "";
-		thumbnailUrl = "";
+		thumbnailUrl = "No direction!";
 		pageNumber = 0;
 		currentPage = 0;
 	}
 	
 	
+	public ComicBook(String name, String name2, String path) {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public String getUrl() {
 		return url;
 	}
@@ -45,5 +50,16 @@ public class ComicBook {
 	}
 	public void setCurrentPage(int currentPage) {
 		this.currentPage = currentPage;
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if(o instanceof ComicBook) {
+			ComicBook comic = (ComicBook) o;
+			return url.equals(comic.getUrl());
+		}
+		else{
+			return false;
+		}
 	}
 }
